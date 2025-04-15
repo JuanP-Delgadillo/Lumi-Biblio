@@ -1,0 +1,155 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos generales para la barra de navegación */
+.navbar {
+    background-color: #7c7c7c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: #ff9800;
+}
+
+.logo-navbar {
+    width: 100px;
+    height: auto;
+}
+
+.navbar-brand{
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+/* Estilos del menú en pantallas grandes */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-nav li {
+    display: inline-block;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.navbar-nav a:hover {
+    color: #ff9800;
+}
+
+.hero {
+    background-image: url('Imagenes/hero-biblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about img {
+    border-radius: 10px;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card-img-top {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: 350px; /* Ajusta la altura para que tenga un tamaño como un libro completo */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para llenar el contenedor */
+    border-radius: 5px; /* Esquinas redondeadas opcionales */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.benefits i {
+    font-size: 2.5rem;
+}
+
+footer {
+    background-color: #aaaaaa;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/*Movil*/
+/* Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto en pantallas grandes */
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* ---- 📌 Estilos para móviles ---- */
+@media (max-width: 300px) {
+    .menu-toggle {
+        color: black; /* Color del icono ☰ */
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        display: none; /* Ocultar por defecto en pantallas grandes */
+    }
+
+    .menu-toggle:hover {
+        color: #ff9800; /* Cambia a naranja al pasar el mouse */
+    }
+
+    .navbar-nav {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        align-items: center; /* Centrar los elementos */
+        gap: 15px; /* Espacio entre los elementos */
+        background: white; /* Color de fondo del menú */
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px; /* Ajustar según la altura de la barra */
+        left: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    .navbar-nav a:hover {
+        background: #ff9800;
+        color: white;
+    }
+
+    /* Mostrar menú cuando esté activo */
+    .navbar-nav.active {
+        display: flex;
+    }
+}
+
+
